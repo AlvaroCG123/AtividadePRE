@@ -7,7 +7,7 @@ const router = Router()
 
 router.get("/",authMiddleware,requireAdminMiddleware, getAll)
 router.post("/criar",authMiddleware,requireAdminMiddleware, createOneUsuario)
-router.patch("/atualizar",authMiddleware,requireAdminMiddleware, updateOneUsuario)
-router.delete("/delete",authMiddleware,requireAdminMiddleware, DeleteOneUsuario)
+router.patch("/atualizar/:id",authMiddleware,requireAdminMiddleware, updateOneUsuario)
+router.delete("/delete/:id",authMiddleware,requireAdminMiddleware, DeleteOneUsuario)
 
 export default router
