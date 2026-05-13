@@ -48,7 +48,7 @@ export async function createOneConvidado(req: Request, res: Response) {
     }
 }
 
-export async function updateOneConvidadoe(req: Request, res: Response) {
+export async function updateOneConvidado(req: Request, res: Response) {
     const {id} = req.params
     const { nome, email, telefone, status_checkin, usuarioid }:UpdateConvidado = req.body
     try{
@@ -76,7 +76,7 @@ export async function updateOneConvidadoe(req: Request, res: Response) {
     }
 }
 
-export async function DeleteConvidadoe(req: Request, res: Response) {
+export async function DeleteOneConvidado(req: Request, res: Response) {
     const {id} = req.params
     try{
         const excluir = await prisma.convidados.delete({
